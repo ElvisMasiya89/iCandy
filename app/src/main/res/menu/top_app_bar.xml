@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/pro_button"
+        android:title="Pro"
+        app:showAsAction="never"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/settings_button"
+        android:icon="@drawable/black_settings_24"
+        android:title="Settings"
+        app:showAsAction="always"/>
+
+</menu>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Rotate"
+        android:id="@+id/nav_rotate"
+        android:icon="@drawable/ic_baseline_rotate_left_24"
+        app:showAsAction="always"/>
+
+    <item
+        android:title="Flip"
+        android:id="@+id/nav_flip"
+        android:icon="@drawable/ic_baseline_flip_24"
+        app:showAsAction="always"/>
+
+    <item
+        android:title="Crop"
+        android:id="@+id/nav_crop"
+        android:icon="@drawable/ic_baseline_check_24"
+        app:showAsAction="always"/>
+
+</menu>

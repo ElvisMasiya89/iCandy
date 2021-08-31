@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+  <androidx.appcompat.widget.LinearLayoutCompat
+      android:id="@+id/classifier_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      tools:context=".classifier.ClassifierFragment">
+      <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:layout_marginTop="4dp"
+          android:outlineSpotShadowColor="@color/black"
+          android:background="@color/Paper"/>
+
+      <FrameLayout
+          android:id="@+id/frame_output"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_margin="4dp"
+          android:padding="4dp"
+          android:layout_weight="8"
+          android:elevation="16dp"
+          android:background="@drawable/round_recycler"
+          android:outlineAmbientShadowColor="@color/black"  >
+            <ImageView
+                android:id="@+id/imageview_output"
+                android:background= "#f0f8ff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"/>
+
+          <ProgressBar
+              android:id="@+id/ProgressBar"
+              android:layout_width="200dp"
+              android:layout_height="144dp"
+              android:layout_centerInParent="true"
+              android:indeterminate="true"
+              android:indeterminateDrawable="@drawable/circle"
+              android:progress="0"
+              android:layout_gravity="center"
+              android:visibility="visible" />
+        </FrameLayout>
+
+      <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:layout_marginTop="4dp"
+          android:outlineSpotShadowColor="@color/black"
+          android:background="@color/Paper">
+
+      </FrameLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

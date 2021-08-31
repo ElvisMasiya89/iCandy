@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.intellicco.icandy.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.intellicco.icandy.onboarding.ViewPagerFragment"
+        android:label="ViewPagerFragment" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment"
+            app:popUpTo="@id/viewPagerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.intellicco.icandy.gallery.GalleryFragment"
+        android:label="GalleryFragment">
+        <action
+            android:id="@+id/action_galleryFragment_to_croppingFragment"
+            app:destination="@id/croppingFragment" />
+        <action
+            android:id="@+id/action_galleryFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/classifierFragment"
+        android:name="com.intellicco.icandy.classifier.ClassifierFragment"
+        android:label="ClassifierFragment" >
+        <argument
+            android:name="input_bmp"
+            app:argType="android.graphics.Bitmap" />
+        <action
+            android:id="@+id/action_classifierFragment_to_sharingFragment"
+            app:destination="@id/sharingFragment"
+            app:popUpTo="@id/classifierFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/croppingFragment"
+        android:name="com.intellicco.icandy.cropping.CroppingFragment"
+        android:label="CroppingFragment" >
+        <action
+            android:id="@+id/action_croppingFragment_to_classifierFragment"
+            app:destination="@id/classifierFragment"
+            app:popUpTo="@id/croppingFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="image_uri"
+            app:argType="android.net.Uri"
+            app:nullable="true" />
+        <argument
+            android:name="image_bmp"
+            app:argType="android.graphics.Bitmap"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sharingFragment"
+        android:name="com.intellicco.icandy.sharing.SharingFragment"
+        android:label="fragment_sharing"
+        tools:layout="@layout/fragment_sharing" >
+        <argument
+            android:name="outPutImg"
+            app:argType="android.graphics.Bitmap"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.intellicco.icandy.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>

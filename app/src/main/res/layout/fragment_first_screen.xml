@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".onboarding.screens.FirstScreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/accept_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/image_slider"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:elevation="16dp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:textStyle="bold"
+                app:textAllCaps="true"
+                android:padding="4dp"
+                android:text="@string/take_a_selfie"
+                android:textColor="@color/golden_blue"
+                android:textSize="21sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/image_slider"
+            android:layout_width="297dp"
+            android:layout_height="495dp"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/round_slider"
+            android:elevation="16dp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:requiresFadingEdge="horizontal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/elvis"
+            app:iss_auto_cycle="true"
+            app:iss_corner_radius="55"
+            app:iss_delay="0"
+            app:iss_period="1000"
+            app:iss_placeholder="@drawable/round_slider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/botton_container"
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_slider"
+            app:layout_constraintVertical_bias="0.822"
+            tools:context=".onboarding.screens.FirstScreen">
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/next"
+                android:layout_width="155dp"
+                android:layout_height="55dp"
+                android:elevation="16dp"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif-medium"
+                android:backgroundTint="@color/egyptian_blue1"
+                android:gravity="center"
+                android:outlineSpotShadowColor="@color/white"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textColorHint="@color/egyptian_blue1"
+                android:textSize="21sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

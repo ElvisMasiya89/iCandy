@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/cropping_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".cropping.CroppingFragment">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="4dp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:background="@color/Paper">
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_crop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:layout_weight="8"
+            android:elevation="16dp"
+            android:background="@color/Slate"
+            android:outlineAmbientShadowColor="@color/black">
+            <com.theartofdev.edmodo.cropper.CropImageView
+                android:id="@+id/cropImageView"
+                android:background="@color/black"
+                android:layout_width="match_parent"
+                app:cropScaleType="centerCrop"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="4dp"
+            android:outlineSpotShadowColor="@color/black"
+            android:background="@color/Paper">
+        </FrameLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
